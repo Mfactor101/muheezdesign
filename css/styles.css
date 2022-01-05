@@ -1,0 +1,464 @@
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    overflow-y: 0;
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+}
+
+/* Fancy stuff */
+
+/* custom scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(48, 48, 48);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(39, 37, 37) 
+  }
+  
+
+hr{
+    width: 20%;
+    border: 10px dotted white;
+    border-style: none none dotted; 
+    color: white; 
+    background-color: transparent;
+    padding: 3%;
+    margin: 0 auto;
+}
+
+
+/* Fancy animations and stuff */
+
+.fade-in{
+    animation: fadeIn 2.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* The main navigation */
+
+.main-nav{
+    padding: 2%;
+    color: #fff;
+}
+
+.navbar-customclass{
+    position: sticky;
+}
+
+.btn-contact{
+    border-radius: 5px;
+    background-color: rgb(39, 37, 37);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    font-weight: bold;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+    color: #fff;
+    padding-top: 0;
+}
+
+.btn-contact::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(39, 37, 37);
+    opacity: 0;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.15);
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+.btn-contact:hover::after{
+    opacity: 1;
+}
+
+.btn-contact:hover{
+    color: white;
+    transform: scale(1.2, 1.2);
+}
+
+.nav-options{
+    padding-right: 1px;  
+}
+
+/* Hero banner section */
+
+
+.main-hero-container{
+    overflow-wrap: break-word;
+}
+
+.hero-text{
+    font-family: 'PT Serif', serif;
+    background-image: linear-gradient(35deg, #c6d639, #eb6cc5, #98c3e0);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 3.6em;
+    text-align: left; 
+    padding-top: 17%;
+    padding-left: 12%;
+}
+
+
+.hero-text {
+    font-size: 50px;
+  
+  @media screen and (min-width: 320px) {
+    .hero-text {
+      font-size: calc(50px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .hero-text {
+      font-size: 55px;
+    }
+  }
+
+}
+
+.sub-hero{
+    padding-left: 12%;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* The name of the image */
+
+.utaha{
+    border-radius: 20px;
+    min-width: 200px;
+    width: 70%;
+    height: 70%;
+    margin: auto;    
+    display: block;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s ease-in-out;
+
+}
+
+.utaha::after{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.utaha:hover::after{
+    opacity: 1;
+}
+.utaha:hover{
+    transform: scale(1.07, 1.07);
+    border-radius: 50%;
+}
+
+
+/* Project section */
+
+.project-text{
+    font-family: 'PT Serif', serif;
+    background-image: linear-gradient(-35deg, #c6d639, #eb6cc5, #98c3e0);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 900;
+    padding-top: 5%;
+    font-size: 3em;
+}
+
+.project-sub-text{
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 20px;
+
+}
+
+/* Project card */
+
+.project-card{
+    min-width: 150px;
+    width: 69%;
+    height: 100%;
+    border: 4px solid white;
+    border-radius: 10px;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.3);
+    background-color: rgb(19, 19, 19);
+    transition: all 0.5s ease-in-out;
+}
+
+.project-card::after{
+    min-width: 150px;
+    width: 69%;
+    height: 100%;
+    border: 4px solid white;
+    border-radius: 10px;
+    box-shadow: 0 100px 200px rgba(0,0,0,0.20);
+    background-color: rgb(19, 19, 19);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project-card:hover::after{
+    opacity: 1;
+}
+
+.project-card:hover{
+    transform: scale(1.03, 1.03);
+}
+
+.project-card-heading{
+    padding: 10px;
+}
+
+.sheamoor{
+    min-width: 60%;
+    max-width: 55%;
+    height: auto;
+    padding: 20px;
+}
+
+.project-card-text{
+    font-weight: 500;
+    padding: 10px;
+}
+
+.under-text{
+    font-weight: bold;
+}
+
+/* Work in progress  */
+
+.btn-WIP{
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    background-color: rgb(39, 37, 37);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-WIP::after{
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-WIP:hover::after{
+    opacity: 1;
+}
+.btn-WIP:hover{
+    color: white;
+    transform: scale(1.05, 1.05);
+}
+
+
+.btn-grad {background-image: linear-gradient(to right, #b83adf 0%, #eb6cc5  41%, #98c3e0 100%)}
+.btn-grad {
+
+
+   font-family: 'Fredoka One', cursive;
+   width: 55%;
+   margin: 10px;
+   padding: 15px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: #fff;     
+   font-weight: bold;      
+   box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   font-weight: bold;
+   text-decoration: none;
+   transform: scale(1.05, 1.05);
+   box-shadow: 0 40px 50px rgba(0,0,0,0.3);
+ }
+
+
+.icons{
+    color: #fff;
+    padding: 10px;
+    padding-bottom: 50px;
+
+}
+.icons:hover{
+    color: rgb(139, 139, 139);
+}
+
+.footer-text{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 50px;
+    background-image: linear-gradient(35deg, #c6d639, #eb6cc5, #98c3e0);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+
+/* About page */
+.work-title{
+    font-family: 'PT Serif', serif;
+    background-image: linear-gradient(35deg, #c6d639, #eb6cc5, #98c3e0);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 3.6em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.about-me-heading{
+    font-family: 'PT serif', serif;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: linear-gradient(-35deg, #c6d639, #eb6cc5, #98c3e0);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.main-about-text {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media screen and (min-width: 320px) {
+    .main-about-text {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    .main-about-text {
+      font-size: 22px;
+    }
+}
+
+
+.me-about{
+    min-width: 200px;
+    width: 33%;
+    height: auto;
+    border-radius: 10px;   
+    box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    transition: all 0.4s ease-in-out;
+
+}
+
+.me-about::after{
+    width: 33%;
+    height: auto;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+}
+
+.me-about:hover::after{
+    opacity: 1;
+}
+.me-about:hover{
+    transform: scale(1.05, 1.05);
+    border-radius: 50%;
+}
+
+
+
+
+/* More fancy stuff */
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 108px;
+}
+
+.wave .shape-fill {
+    fill: #1E1E1E;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .wave svg {
+        width: calc(100% + 1.3px);
+        height: 80px;
+    }
+}
