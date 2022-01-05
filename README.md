@@ -1,2 +1,0 @@
-# muheezdesign
-My personal portfolio
